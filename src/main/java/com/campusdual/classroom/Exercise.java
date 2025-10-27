@@ -18,7 +18,15 @@ public class Exercise {
     // Si la hora es desde las 14:00 a las 20:59, imprimir por pantalla → It's afternoon
     // Si la hora es desde las 21:00 a las 23:59, imprimir por pantalla → It's night
     public static void checkHour(int hour) {
-
+        if (hour >= 0 && hour < 7 || hour >= 21 && hour <= 23) {
+            System.out.println("It's night");
+        } else if (hour >= 7 && hour < 14) {
+            System.out.println("It's morning");
+        } else if (hour >= 14 && hour < 21) {
+            System.out.println("It's afternoon");
+        } else {
+            System.out.println("Invalid hour");
+        }
     }
 
     //TODO ↓
@@ -27,7 +35,16 @@ public class Exercise {
     // Si es Julio, Agosto o Septiembre, imprimir por pantalla → Summer
     // Si es Octubre, Noviembre o Diciembre, imprimir por pantalla → Autumn
     public static void checkSeason(int month) {
-
+        if (month >= 1 && month <= 3) {
+            System.out.println("Winter");
+        } else if (month >= 4 && month <= 6) {
+            System.out.println("Spring");
+        } else if (month >= 7 && month <= 9) {
+            System.out.println("Summer");
+        } else if (month >= 10 && month <= 12) {
+            System.out.println("Autumn");
+        } else {
+            System.out.println("Invalid month");
+        }
     }
-
 }
